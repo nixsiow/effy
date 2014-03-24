@@ -14,14 +14,9 @@
       <% if @current_user %>
         <span>Welcome Back <em><strong><%= @current_user.name %></strong></em> !</span>
       <% end %>
+      
+      <%== intellinav %>
 
-        <nav>
-            <a href="/">Home</a>
-            <a href="/tasks">All Task</a>
-            <a href="/tasks/categories">Categories</a>
-            <a href="/tasks/archives">Archives</a>
-            <%== intellinav  %>
-        </nav>
     </div>
 
     <i class="icon ion-refreshing"></i>

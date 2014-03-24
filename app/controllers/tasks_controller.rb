@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+  def home
+    
+  end
+
   def index
     @tasks = Task.where(:user_id => @current_user.id, :completed => false)
   end
@@ -38,11 +42,12 @@ class TasksController < ApplicationController
 
   def task_input
     binding.pry
-    # change to an instance variable and pass as a hidden field in form
-    @category = params[:category]
-    @task = Task.new
-    # raise params.inspect
-    # @edit_task = Task.find params[:id] # check this 
+    @category = params[:category].split('?')[0]
+    if params[:category].split('?')[1]
+      @task = Task.find params[:category].split('?')[1]
+    else
+      @task = Task.new
+    end
   end
 
   def categories

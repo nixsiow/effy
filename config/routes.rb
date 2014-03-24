@@ -1,11 +1,11 @@
 Effy::Application.routes.draw do
-  root :to => 'tasks#new'
+  root :to => 'tasks#home'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
-  get '/tasks/category/:category' => 'tasks#task_input'
+  get '/tasks/category/:category' => 'tasks#task_input', :as => :task_type
   get '/tasks/categories' => 'tasks#categories'
   get '/tasks/:category/tasks_by_category' => 'tasks#index_by_category'
   get '/tasks/archives' => 'tasks#archives'
