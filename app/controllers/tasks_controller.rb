@@ -37,12 +37,8 @@ class TasksController < ApplicationController
   end
 
   def task_input
-    binding.pry
-    # change to an instance variable and pass as a hidden field in form
     @category = params[:category]
     @task = Task.new
-    # raise params.inspect
-    # @edit_task = Task.find params[:id] # check this 
   end
 
   def categories

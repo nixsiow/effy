@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Effy - earn your extra time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/assets/buttons.css">
   <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -9,6 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
     <div class="navigation">
 
       <% if @current_user %>
@@ -29,6 +31,8 @@
     <div class="yield_container">
         <%= yield %>
     </div>
+
+  </div>
 
 </body>
 </html>

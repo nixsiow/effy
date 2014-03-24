@@ -46,9 +46,7 @@ gem 'binding_of_caller'
 gem 'protected_attributes'
 gem 'annotate'
 gem 'open-weather', :require => 'open_weather'
-gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
-gem 'less-rails'
+gem 'bootstrap-sass'
 
 gem 'ionicons-rails'
 gem "font-awesome-rails"
