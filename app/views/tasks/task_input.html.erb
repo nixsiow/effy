@@ -1,0 +1,7 @@
+<div class="task_input" id="task_input">
+  <%= form_for @task do |f| %>
+    <%= f.hidden_field :category, :value => @category %>
+    <%= f.text_field :description, :required => true %>
+    <%= f.submit class: 'btn btn-success'%>
+  <% end %>
+</div>

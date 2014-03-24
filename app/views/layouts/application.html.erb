@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Effy - earn your extra time</title>
+  <link rel="stylesheet" href="/assets/buttons.css">
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="navigation">
+
+      <% if @current_user %>
+        <span>Welcome Back <em><strong><%= @current_user.name %></strong></em> !</span>
+      <% end %>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tasks">All Task</a>
+            <a href="/tasks/categories">Categories</a>
+            <a href="/tasks/archives">Archives</a>
+            <%== intellinav  %>
+        </nav>
+    </div>
+
+    <i class="icon ion-refreshing"></i>
+
+    <div class="yield_container">
+        <%= yield %>
+    </div>
+
+</body>
+</html>

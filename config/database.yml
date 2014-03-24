@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: effy_development
+  pool: 5
+  host: localhost
+  username: NixSiow
+  password:

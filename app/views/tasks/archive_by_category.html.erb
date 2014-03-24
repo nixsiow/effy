@@ -1,0 +1,3 @@
+<% @archive_by_category.each do |task| %>
+  <%= link_to task.description, task_path(task.id) %>
+<% end %>

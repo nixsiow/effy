@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require ionicons
+ *= require font-awesome
+ *= require_self
+ *= require_tree .
+ */
+
+html {
+    font-family: 'Poiret One', cursive;
+    /*background: url('/assets/background4.jpg') center center fixed;*/
+    background-size: cover;
+    text-align: center;
+    padding: 30px;
+}
+
+html > body {
+    background-color: transparent!important;
+}
+
+.navigation nav a {
+    display: inline;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    cursor: auto;
+    color: gold!important;
+    text-shadow: 2px 2px 1px white;
+}
+
+.icon.ion-refreshing {
+    font-size: 50px;
+}

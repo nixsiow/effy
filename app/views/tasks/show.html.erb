@@ -1,0 +1,10 @@
+<h1><%= @task.description %></h1>
+
+<h2>Category: <%= @task.category %></h2>
+<h2>Status: <%= @task.completed ? "Completed" : "to be complete" %></h2>
+<%= link_to 'Undo', task_uncompleted_path(@task) if @task.completed %>
+<h2>Task Owner: <%= @task.user.name.capitalize %></h2>
+
+
+<%= link_to 'Edit Task', edit_task_path(@task) %>
+<%= link_to 'Complete & Archive', task_completed_path(@task) %>
