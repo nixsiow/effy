@@ -1,6 +1,9 @@
-<h1>Archive</h1>
-<%= link_to "View all", "/tasks/archives/all" %>
-<%= link_to "Urgent & Important", "/tasks/archives/UI" %>
-<%= link_to "Urgent, Not Important", "/tasks/archives/UNI" %>
-<%= link_to "Not Urgent, Important", "/tasks/archives/NUI" %>
-<%= link_to "Not Urgent, Not Important", "/tasks/archives/NUNI" %>
+<h1 class="lead">Archive</h1>
+
+<div class="list-group">
+    <a href="/tasks/archives/all" class="list-group-item active">Show all</a>
+    <a href="/tasks/archives/UI" class="list-group-item">Urgent & Important</a>
+    <a href="/tasks/archives/UNI" class="list-group-item">Urgent, Not Important</a>
+    <a href="/tasks/archives/NUI" class="list-group-item">Not Urgent, Important</a>
+    <a href="/tasks/archives/NUNI" class="list-group-item">Not Urgent, Not Important</a>
+</div>

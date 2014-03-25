@@ -1,8 +1,13 @@
 <div class="category_button">
-  <%= button_to "Urgent & Important", task_type_path(:category => "UI?#{params[:id]}"), :method => :get, :class => 'btn btn-primary'%>
-  <%= button_to "Urgent, Not Important", task_type_path(:category => "UNI?#{params[:id]}"), :method => :get, :class => 'btn btn-success' %>
-  <%= button_to "Not Urgent, Important", task_type_path(:category => "NUI?#{params[:id]}"), :method => :get, :class => 'btn btn-info' %>
-  <%= button_to "Not Urgent, Not Important", task_type_path(:category => "NUNI?#{params[:id]}"), :method => :get, :class => 'btn btn-warning' %>
+    <div class="first_group_button">
+      <%= button_to "Urgent & Important", task_type_path(:category => "UI?#{params[:id]}"), :method => :get, :class => 'btn btn-warning'%>
+      <%= button_to "Urgent, Not Important", task_type_path(:category => "UNI?#{params[:id]}"), :method => :get, :class => 'btn btn-success' %>
+    </div>
+
+    <div class="second_group_button">
+      <%= button_to "Not Urgent, Important", task_type_path(:category => "NUI?#{params[:id]}"), :method => :get, :class => 'btn btn-info' %>
+      <%= button_to "Not Urgent, Not Important", task_type_path(:category => "NUNI?#{params[:id]}"), :method => :get, :class => 'btn btn-primary' %>
+    </div>
 </div>
 
 

@@ -1,2 +1,16 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<ul>
+    <%= image_tag @user.image, :class => "user_image" %>
+
+    <div class="user_info">
+        <h1 class="lead"><strong><%= @user.name %></strong></h1>
+        <span class="lead"><strong>About: </strong><br><%= @user.about %></span>
+
+        <br><br><%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit" %>
+        
+    </div>
+    <hr class="style-two">
+    <div id="footer">
+    <h5 class="lead ion-ios7-person"> <%= @current_user.name %>'s <%= link_to('Current Tasks', tasks_categories_path) %>
+    <%= link_to('Archives', tasks_archives_path) %></h5>
+    </div>
+</ul>

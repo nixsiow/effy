@@ -20,6 +20,22 @@ class UsersController < ApplicationController
       end
   end
 
+  def show
+    @user = User.find @current_user.id
+  end
+
+  def update
+    user = User.find @current_user.id
+    about = params[:user] 
+    user.about = about[:about]
+    user.save
+    redirect_to user_path
+  end
+
+  def edit
+    @user = User.find @current_user.id
+  end
+
 
   private
   def check_if_logged_in

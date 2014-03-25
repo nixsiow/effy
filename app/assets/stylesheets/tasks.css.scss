@@ -2,12 +2,39 @@
     text-decoration: none;
 }
 
-/*.task_input {
-    position: fixed;
-    bottom: 30%;
-    left: 40%;
-}*/
-
 small {
     font-size: 25px;
+}
+
+.button_to input {
+    padding: 2em;
+    border-radius: 50px;
+    min-width: 280px;
+    min-height: 100px;
+}
+
+.form-control {
+    max-width: 300px;
+}
+
+.first_group_button, .second_group_button {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+iframe {
+    border: 1px solid black;
+}
+
+.bg-primary, .bg-success, .bg-info {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.center-block {
+    text-align: center;
+}
+
+.ion-pin {
+    font-size: 18px;
 }

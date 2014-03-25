@@ -1,5 +1,9 @@
-<h1>Catagories</h1>
-<%= link_to "Urgent & Important", "/tasks/UI/tasks_by_category" %>
-<%= link_to "Urgent, Not Important", "/tasks/UNI/tasks_by_category" %>
-<%= link_to "Not Urgent, Important", "/tasks/NUI/tasks_by_category" %>
-<%= link_to "Not Urgent, Not Important", "/tasks/NUNI/tasks_by_category" %>
+<h1 class="lead">Your current tasks</h1>
+
+<div class="list-group">
+    <a href="/tasks/categories/all" class="list-group-item active">Show all</a>
+    <a href="/tasks/UI/tasks_by_category" class="list-group-item">Urgent & Important</a>
+    <a href="/tasks/UNI/tasks_by_category" class="list-group-item">Urgent, Not Important</a>
+    <a href="/tasks/NUI/tasks_by_category" class="list-group-item">Not Urgent, Important</a>
+    <a href="/tasks/NUNI/tasks_by_category" class="list-group-item">Not Urgent, Not Important</a>
+</div>

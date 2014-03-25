@@ -33,25 +33,25 @@ group :doc do
 end
 
 
+# additional gems
 gem 'haml'
 gem 'sextant'
 gem 'bcrypt-ruby'
-
-# Additional debugging gems
-gem 'pry-rails'
-gem 'pry-debugger'
-gem 'pry-stack_explorer'
-gem 'better_errors'
-gem 'binding_of_caller'
 gem 'protected_attributes'
-gem 'annotate'
 gem 'open-weather', :require => 'open_weather'
-gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
-gem 'less-rails'
-
+gem 'bootstrap-sass'
 gem 'ionicons-rails'
 gem "font-awesome-rails"
+
+group :development do
+    # Additional debugging gems
+    gem 'pry-rails'
+    gem 'pry-debugger'
+    gem 'pry-stack_explorer'
+    gem 'better_errors'
+    gem 'binding_of_caller'
+    gem 'annotate'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

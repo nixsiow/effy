@@ -14,30 +14,66 @@
  *= require_tree .
  */
 
+@import "bootstrap.css";
+
 html {
-    font-family: 'Poiret One', cursive;
     /*background: url('/assets/background4.jpg') center center fixed;*/
     background-size: cover;
-    text-align: center;
-    padding: 30px;
 }
 
 html > body {
     background-color: transparent!important;
 }
 
-.navigation nav a {
-    display: inline;
+span {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 35px;
+}
+
+#home_welcome {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 55px;
 }
 
 a {
     display: block;
-    text-decoration: none;
-    cursor: auto;
-    color: gold!important;
-    text-shadow: 2px 2px 1px white;
 }
 
-.icon.ion-refreshing {
-    font-size: 50px;
+.yield_container {
+    padding : 30px;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+kbd {
+    font-size: 20px;
+    padding: 8px 50px;
+    margin: 5px;
+}
+
+a:hover {
+    text-decoration: none!important;
+}
+
+.category_button {
+    text-align: center;
+}
+
+#social {
+    font-size: 20px;
+}
+
+i {
+    font-size: 16px;
+}
+
+nav {
+    padding: 15px;
 }

@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_filter :check_if_logged_in, :except => [:home]
+  before_filter :check_if_admin, :only => [:index]
+
   def home
     
   end
@@ -41,7 +44,6 @@ class TasksController < ApplicationController
   end
 
   def task_input
-    binding.pry
     @category = params[:category].split('?')[0]
     if params[:category].split('?')[1]
       @task = Task.find params[:category].split('?')[1]
@@ -58,18 +60,22 @@ class TasksController < ApplicationController
     @tasks_by_category = Task.where(:user_id => @current_user.id, :category => params[:category], :completed => false)
   end
 
+  def categories_all
+    @tasks = Task.where(:user_id => @current_user.id, :completed => false)
+  end
+
   def completed
     task = Task.find params[:id]
     task.completed = true
     task.save
-    redirect_to tasks_path
+    redirect_to new_task_path
   end
 
   def uncompleted
     task = Task.find params[:id]
     task.completed = false
     task.save
-    redirect_to tasks_path
+    redirect_to new_task_path
   end
 
   def archives
@@ -84,4 +90,13 @@ class TasksController < ApplicationController
     @tasks = Task.where(:user_id => @current_user.id, :completed => true)
   end
 
+
+  private
+  def check_if_logged_in
+      redirect_to(root_path) if @current_user.nil?
+  end
+
+  def check_if_admin
+      redirect_to(root_path) if @current_user.nil? || @current_user.admin == false
+  end
 end

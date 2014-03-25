@@ -1,29 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Effy - earn your extra time</title>
-  <link rel="stylesheet" href="/assets/buttons.css">
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+  <title>Effy - make your time worth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" src="//http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css
+">
+  <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navigation">
 
-      <% if @current_user %>
-        <span>Welcome Back <em><strong><%= @current_user.name %></strong></em> !</span>
-      <% end %>
+  <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><span>Effy</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <%== intellinav %>
+      </ul>
+
       
-      <%== intellinav %>
+      <% if @current_user %>
+        <kbd class="ion-speakerphone">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
+      <% end %>
 
-    </div>
 
-    <i class="icon ion-refreshing"></i>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook" id="social"></a></li>
+        <li><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter" id="social"></a></li>
+        <li><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus" id="social"></a></li>
+        <li><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github" id="social"></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
-    <div class="yield_container">
-        <%= yield %>
-    </div>
+
+<hr class="style-two">
+
+  <div class="yield_container">
+      <%= yield %>
+  </div>
 
 </body>
 </html>
