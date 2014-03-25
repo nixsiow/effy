@@ -1,8 +1,10 @@
-<h2>You have <%= pluralize(@tasks_by_category.count, params[:category] + ' task') %> to go!</h2>
+<div class="center-block" id="center-block">
+    <h2><u>You have <%= pluralize(@tasks_by_category.count, params[:category] + ' task') %> to go!</u></h2>
 
-<% @tasks_by_category.each do |task| %>
-  <%= link_to task.description, task_path(task.id) %>
-<% end %>
+    <% @tasks_by_category.each do |task| %>
+      <h2><%= link_to task.description, task_path(task.id) %></h2>
+    <% end %>
 
-<br>
-<h4 class="ion-reply"><%= link_to('back', tasks_categories_path) %></h4>
+    <br>
+    <h4 class="ion-reply"><%= link_to('back', tasks_categories_path) %></h4>
+<div>

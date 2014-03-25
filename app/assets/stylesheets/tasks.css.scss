@@ -3,14 +3,18 @@
 }
 
 small {
-    font-size: 25px;
+    font-size: 13px;
 }
 
 .button_to input {
-    padding: 2em;
+    padding: 10px 3px;
     border-radius: 50px;
-    min-width: 280px;
+    min-width: 465px;
     min-height: 100px;
+    margin: 17px 0px;
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #2a0a0d;
 }
 
 .form-control {
@@ -24,6 +28,10 @@ small {
 
 iframe {
     border: 1px solid black;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
 .bg-primary, .bg-success, .bg-info {
@@ -38,3 +46,132 @@ iframe {
 .ion-pin {
     font-size: 18px;
 }
+
+#inputbox {
+  border: 0 transparent;
+  padding: 4px 25px 5px 5px;
+  border-radius: 5px;
+  width: 350px;
+  border: 1px solid #E3DFC9;
+  background: rgba(255,255,255,0.7);
+  color: #ff422a;
+  font-size: 22px;
+  font-style: italic;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#inputbox:active , #inputbox:focus, #inputbox:hover{
+  color: #ff422a;
+  width: 500px;
+}
+
+.iframe {
+    display: inline-block;
+}
+
+.sign_up {
+    display: inline-block;
+    vertical-align: top;
+    left: 20px;
+}
+
+div.progress.progress-striped.active {
+    border: 1px solid black;
+}
+
+div.progress-bar {
+    border: 1px solid white;
+}
+
+h2 {
+    font-size: 55px!important;
+}
+
+#center-block {
+    background: rgba(0,0,0,0.7);
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bg-primary, .bg-success, .bg-info {
+    padding: 5px 30px;
+    border-radius: 20px;
+}
+
+
+/* for ui button */
+.uibutton {
+    display:inline-block;
+    padding:5px 20px;
+    border-top:1px solid #96d1f8;
+    color:#fff;
+    border-radius:8px;
+    box-shadow:rgba(0,0,0,1) 0 1px 0;
+    text-shadow:rgba(0,0,0,.4) 0 1px 0;
+    text-decoration:none;
+    background:#65a9d7;
+    background-repeat:no-repeat;
+    background-image:-webkit-linear-gradient(
+        top left,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -webkit-linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-image:-moz-linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -moz-linear-gradient(
+        #3e779d, #65a9d7
+    );    
+    background-image:-o-linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    -o-linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-image:linear-gradient(
+        0 0,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 37%,
+        rgba(255, 255, 255, 0.8) 45%,
+        rgba(255, 255, 255, 0.0) 50%
+    ),
+    linear-gradient(
+        #3e779d, #65a9d7
+    );
+    background-position:-100px -100px, 0 0;
+    -moz-background-size:250% 250%, 100% 100%;
+         background-size:250% 250%, 100% 100%;
+    -webkit-transition:background-position 0s ease;
+       -moz-transition:background-position 0s ease;       
+         -o-transition:background-position 0s ease;
+            transition:background-position 0s ease;
+}
+
+.uibutton:hover,
+.uibutton:focus {
+    color:#fff;
+    background-position:0 0, 0 0;
+    -webkit-transition-duration:0.5s;
+       -moz-transition-duration:0.5s;
+            transition-duration:0.5s;
+}
+
+.uibutton:active {
+    top:1px;   
+}
+

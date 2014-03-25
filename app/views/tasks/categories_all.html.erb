@@ -1,7 +1,10 @@
-<h1 class="lead">All Your Current Tasks</h1>
+<div class="center-block" id="center-block">
+    <h2 class="lead"><u>All Your Current Tasks</u></h2>
 
-<ul class="list-unstyled">
     <% @tasks.each do |task| %>
-        <li><%= link_to task.description, task_path(task.id), :class => 'ion-pin' %></li>
+        <h2><%= link_to task.description, task_path(task.id) %></h2>
     <% end %>
-</ul>
+
+    <br>
+    <h4 class="ion-reply"><%= link_to('back', tasks_categories_path) %></h4>
+<div>

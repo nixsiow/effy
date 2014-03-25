@@ -1,15 +1,17 @@
-<h1>Update Profile <i class="ion-loading-a"></i></h1>
+<div id="center-block">
+    <h1>Update Profile <i class="ion-loading-a"></i></h1><br>
 
-<%= form_for @user do |f| %>
-    <div class="form-group">
-        <%= label_tag 'Profile Picture:' %>
-        <%= f.url_field :image %>
-    </div>
+    <%= form_for @user do |f| %>
+        <div class="form-group">
+            <%= label_tag 'Profile Picture:' %>
+            <%= f.url_field :image, :class => 'form-control' %>
+        </div>
 
-    <div class="form-group">
-        <%= label_tag 'About:' %>
-        <%= f.text_area(:about, size: '100x3', :placeholder => 'write something about you') %>
-    </div>
+        <div class="form-group">
+            <%= label_tag 'About:' %>
+            <%= f.text_area(:about, size: '100x5', :placeholder => 'write something about you', :class => 'form-control') %>
+        </div>
 
-    <%= f.submit class: 'btn btn-success'%>
-<% end %>
+        <%= f.submit class: 'btn btn-success'%>
+    <% end %>
+</div>

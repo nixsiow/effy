@@ -7,16 +7,16 @@
     = form_for @user do |f|
         %div.form-group
             = f.label :name
-            = f.text_field :name, :autofocus => true, :class => 'form-control'
+            = f.text_field :name, :autofocus => true, :class => 'form-control', :placeholder => 'username'
         %div.form-group
             = f.label :image
-            = f.url_field :image, :required => true, :class => 'form-control'
+            = f.url_field :image, :required => true, :class => 'form-control', :placeholder => 'image url'
         %div.form-group
             = f.label :password
-            = f.password_field :password, :class => 'form-control'
+            = f.password_field :password, :class => 'form-control', :placeholder => 'password'
         %div.form-group
             = f.label :password_confirmation
-            = f.password_field :password_confirmation, :class => 'form-control'
+            = f.password_field :password_confirmation, :class => 'form-control', :placeholder => 're-enter password'
 
         = f.submit :class => 'btn btn-info'
 

@@ -1,8 +1,10 @@
-<h2>You have <%= pluralize(@archive_by_category.count, params[:category] + ' task') %> in archive!</h2>
+<div class="center-block" id="center-block">
+    <h2><u>You have <%= pluralize(@archive_by_category.count, params[:category] + ' task') %> in archive!</u></h2>
 
-<% @archive_by_category.each do |task| %>
-  <%= link_to task.description, task_path(task.id) %>
-<% end %>
+    <% @archive_by_category.each do |task| %>
+      <h2><%= link_to task.description, task_path(task.id) %></h2>
+    <% end %>
 
-<br>
-<h4 class="ion-reply"><%= link_to('back', tasks_archives_path) %></h4>
+    <br>
+    <h4 class="ion-reply"><%= link_to('back', tasks_archives_path) %></h4>
+</div>

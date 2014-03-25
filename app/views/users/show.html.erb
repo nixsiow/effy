@@ -1,16 +1,16 @@
-<ul>
-    <%= image_tag @user.image, :class => "user_image" %>
+<div id="center-block">
+    <ul>
+        <span class="ion-ios7-person-outline"><strong><em>  <%= @user.name %></em></strong></span><br><br>
+        <%= image_tag @user.image, :class => "user_image" %>
 
-    <div class="user_info">
-        <h1 class="lead"><strong><%= @user.name %></strong></h1>
-        <span class="lead"><strong>About: </strong><br><%= @user.about %></span>
+        <div class="user_info">
+            <br><%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit" %>
+            <h5 class="lead"><strong>About <%= @user.name %>: </strong><br><%= @user.about %></h5>
+        </div>
 
-        <br><br><%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit" %>
-        
-    </div>
-    <hr class="style-two">
-    <div id="footer">
-    <h5 class="lead ion-ios7-person"> <%= @current_user.name %>'s <%= link_to('Current Tasks', tasks_categories_path) %>
-    <%= link_to('Archives', tasks_archives_path) %></h5>
-    </div>
-</ul>
+        <div id="user_link">
+            <h5 class="lead ion-ios7-person"> <%= @current_user.name %>'s <%= link_to('Current Tasks', tasks_categories_path) %>
+            <%= link_to('Archives', tasks_archives_path) %></h5>
+        </div>
+    </ul>
+</div>
