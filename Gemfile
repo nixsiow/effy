@@ -42,6 +42,7 @@ gem 'open-weather', :require => 'open_weather'
 gem 'bootstrap-sass'
 gem 'ionicons-rails'
 gem "font-awesome-rails"
+gem 'rails_12factor'
 
 group :development do
     # Additional debugging gems
