@@ -46,6 +46,11 @@ span {
 
 a {
     display: block;
+    color: #5867ff;
+}
+
+a:hover {
+    color: #9eebff;
 }
 
 .yield_container {

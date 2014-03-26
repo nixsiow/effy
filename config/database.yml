@@ -7,7 +7,7 @@ development:
   username: NixSiow
   password:
 
-  production:
+production:
   adapter: postgresql
   encoding: unicode
   database: effy_production

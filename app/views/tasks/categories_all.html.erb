@@ -2,7 +2,7 @@
     <h2 class="lead"><u>All Your Current Tasks</u></h2>
 
     <% @tasks.each do |task| %>
-        <h2><%= link_to task.description, task_path(task.id) %></h2>
+        <h2 ><%= link_to task.description, task_path(task.id), :class => "outline-inward" %></h2>
     <% end %>
 
     <br>
