@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"><span>Effy</span></a>
+      <a class="navbar-brand grow-rotate" href="/"><span>Effy</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -35,22 +35,19 @@
 
       
       <% if @current_user %>
-        <kbd class="ion-speakerphone">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
+        <kbd class="ion-speakerphone wobble-vertical">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
       <% end %>
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook" id="social"></a></li>
-        <li><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter" id="social"></a></li>
-        <li><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus" id="social"></a></li>
-        <li><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github" id="social"></a></li>
+        <li><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook grow" id="social"></a></li>
+        <li><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter grow" id="social"></a></li>
+        <li><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus grow" id="social"></a></li>
+        <li><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github grow" id="social"></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-
-<hr class="style-two">
 
   <div class="yield_container">
       <%= yield %>

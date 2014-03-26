@@ -1,21 +1,23 @@
 <div id="center-block">
-    <ul>
+    <span class="ion-ios7-person-outline"><strong><em>  <%= @user.name %></em></strong></span>
+    <hr class="style-two">
+
         <div class="user_first">
-            <span class="ion-ios7-person-outline"><strong><em>  <%= @user.name %></em></strong></span><br><br>
-            <%= image_tag @user.image, :class => "user_image" %>
+            <%= image_tag @user.image, :class => "user_image grow" %>
         </div>
         <div class="user_second">
-            <br><%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit btn btn-primary btn-sm grow-rotate" %>
-            <h5 class="lead"><strong>About <%= @user.name %>: </strong><br><%= @user.about %></h5>
+            <h5 class="lead"><strong><u>About <%= @user.name %>: </u></strong><br><%= @user.about %></h5>
+            <h5 class="lead"><strong><u><%= @user.name %>'s Email: </u></strong><br><%= @user.email %></h5>
+            <h5 class="lead"><strong><u><%= @user.name %>'s Location: </u></strong><br><%= @user.location %></h5>
+            <%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit btn btn-primary btn-sm grow-rotate" %>
         </div>
 
         <div id="user_link">
             <div class="center-block">
-            <kbd class="lead ion-ios7-person"> <%= @current_user.name %>'s</kbd><br>
             <h1 class="outline-inward"><%= link_to('Current Tasks', tasks_categories_path) %></h1>
              &
             <h1 class="outline-inward"><%= link_to('Archives', tasks_archives_path) %></h1>
         </div>
         </div>
-    </ul>
+
 </div>

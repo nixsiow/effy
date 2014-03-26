@@ -1,14 +1,18 @@
-<kbd class="lead">Your current tasks</kbd>
+<div id="center-block">
+    <kbd class="lead pulse-grow">Your current tasks</kbd>
 
-<div class="list-group">
-    <a href="/tasks/categories/all" class="list-group-item active">Show all</a>
-    <a href="/tasks/UI/tasks_by_category" class="list-group-item">Urgent & Important</a>
-    <a href="/tasks/UNI/tasks_by_category" class="list-group-item">Urgent, Not Important</a>
-    <a href="/tasks/NUI/tasks_by_category" class="list-group-item">Not Urgent, Important</a>
-    <a href="/tasks/NUNI/tasks_by_category" class="list-group-item">Not Urgent, Not Important</a>
-</div>
+    <div class="list-group">
+        <a href="/tasks/categories/all" class="list-group-item active">Show all</a>
+        <a href="/tasks/UI/tasks_by_category" class="list-group-item">Urgent & Important</a>
+        <a href="/tasks/UNI/tasks_by_category" class="list-group-item">Urgent, Not Important</a>
+        <a href="/tasks/NUI/tasks_by_category" class="list-group-item">Not Urgent, Important</a>
+        <a href="/tasks/NUNI/tasks_by_category" class="list-group-item">Not Urgent, Not Important</a>
+    </div>
 
-<div id="user_link">
-    <h5 class="lead ion-ios7-person"> <%= @current_user.name %>'s <%= link_to('Current Tasks', tasks_categories_path) %>
-    <%= link_to('Archives', tasks_archives_path) %></h5>
+    <div id="user_link">
+        <div class="center-block">
+        <h1 class="outline-inward"><%= link_to('Current Tasks', tasks_categories_path) %></h1>
+         &
+        <h1 class="outline-inward"><%= link_to('Archives', tasks_archives_path) %></h1>
+    </div>
 </div>

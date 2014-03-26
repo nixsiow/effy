@@ -26,8 +26,10 @@ class UsersController < ApplicationController
 
   def update
     user = User.find @current_user.id
-    about = params[:user] 
-    user.about = about[:about]
+    info = params[:user] 
+    user.about = info[:about]
+    user.email = info[:email]
+    user.location = info[:location]
     user.save
     redirect_to user_path
   end

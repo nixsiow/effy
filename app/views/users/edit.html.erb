@@ -12,6 +12,16 @@
             <%= f.text_area(:about, size: '100x5', :placeholder => 'write something about you', :class => 'form-control') %>
         </div>
 
+        <div class="form-group">
+            <%= label_tag 'Email address:' %>
+            <%= f.email_field :email, :class => 'form-control' %>
+        </div>
+
+        <div class="form-group">
+            <%= label_tag 'Location:' %>
+            <%= f.text_field :location, :class => 'form-control' %>
+        </div>
+
         <%= f.submit class: 'btn btn-success'%>
     <% end %>
 </div>

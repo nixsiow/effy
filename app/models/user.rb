@@ -13,7 +13,7 @@
 #
 
 class User < ActiveRecord::Base
-    attr_accessible :name, :about, :image, :password, :password_confirmation
+    attr_accessible :name, :about, :image, :password, :password_confirmation, :email, :location
     has_many :tasks
 
     has_secure_password

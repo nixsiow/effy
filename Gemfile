@@ -44,6 +44,9 @@ gem 'ionicons-rails'
 gem "font-awesome-rails"
 gem 'rails_12factor'
 
+require 'open-uri'
+gem 'json'
+
 group :development do
     # Additional debugging gems
     gem 'pry-rails'
