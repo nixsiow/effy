@@ -20,6 +20,6 @@ class User < ActiveRecord::Base
 
     has_secure_password
     validates :image, :presence => true
-    validates :name, :presence => true, :length => { :minimum => 2 }
-    validates :name, :uniqueness => true
+    validates :name, :presence => true, length: { minimum: 6, maximum: 20 }, :uniqueness => { case_sensitive: false }, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "only allows alphanumeric characters" }
+    validates :password, :presence => true, length: { minimum: 6, maximum: 20 }, format: { with: /\A[a-zA-Z0-9]+\Z/, message: "only allows alphanumeric characters" }
 end

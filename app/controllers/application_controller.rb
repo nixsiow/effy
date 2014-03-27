@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     end
 
     def find_weather
-        if (session[:weather].nil? || Time.now - session[:last_weather_lookup] > 30 * 60)
+        if (session[:weather].nil? || Time.now - session[:last_weather_lookup] > (30 * 60))
             ip = request.remote_ip
             if (ip == '127.0.0.1')
                 ip = '202.171.180.162'
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
             location = Geocoder.search(ip).first
             session[:location] = "#{location.city}, #{location.country}"
             weather = OpenWeather::Current.city(session[:location])
-            session[:weather] = weather.code
+            session[:weather] = weather['weather'][0]['id']
             session[:last_weather_lookup] = Time.now
 
             # get celcius

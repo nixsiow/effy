@@ -3,6 +3,7 @@
         %ol
             - @user.errors.full_messages.each do |msg|
                 %li= msg
+                %hr.style-two
 
     %section.signup
         = form_for @user do |f|

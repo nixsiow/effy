@@ -1,6 +1,7 @@
 %div#center-block
     - if flash[:notice].present?
         %h2= flash[:notice]
+        %hr.style-two
         
     = form_tag '/login' do
         %div.form-group

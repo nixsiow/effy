@@ -20,6 +20,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    #raise params.inspect
     @task = Task.new
   end
 
