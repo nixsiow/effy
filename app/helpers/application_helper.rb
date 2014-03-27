@@ -6,7 +6,7 @@ module ApplicationHelper
 
             links += "<li>#{ link_to('<i class="ion-ios7-compose grow">  New Effy</i>'.html_safe, new_task_path) }</li>"
 
-            links += "<li>#{ link_to('<i class="ion-bookmark grow">  Dashboard</i>'.html_safe, '/users/:id', :id => @current_user.id) }</li>"
+            links += "<li>#{ link_to('<i class="ion-bookmark grow">  Dashboard</i>'.html_safe, user_path(@current_user)) }</li>"
         else
             links += "<li>#{ link_to('Sign Up', new_user_path) }</li>
              <li>#{ link_to('Sign in', login_path) }</li>"

@@ -18,4 +18,6 @@ Effy::Application.routes.draw do
   get '/tasks/:id/uncompleted' => 'tasks#uncompleted', :as => 'task_uncompleted'
 
   resources :tasks, :users
+
+  get '/404' => 'tasks#error_test'
 end

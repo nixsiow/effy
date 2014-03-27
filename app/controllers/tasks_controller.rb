@@ -99,4 +99,8 @@ class TasksController < ApplicationController
   def check_if_admin
       redirect_to(root_path) if @current_user.nil? || @current_user.admin == false
   end
+
+  def error_test
+    render :status => 404
+  end
 end
