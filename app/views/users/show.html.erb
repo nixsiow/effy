@@ -7,8 +7,8 @@
         </div>
         <div class="user_second">
             <h5 class="lead"><strong><u>About <%= @user.name %>: </u></strong><br><%= @user.about %></h5>
-            <h5 class="lead"><strong><u><%= @user.name %>'s Email: </u></strong><br><%= @user.email %></h5>
-            <h5 class="lead"><strong><u><%= @user.name %>'s Location: </u></strong><br><%= @user.location %></h5>
+            <h5 class="lead"><strong><u><%= @user.name %>'s Email: </u></strong><br><%= @user.try(:email) %></h5>
+            <h5 class="lead"><strong><u><%= @user.name %>'s Location: </u></strong><br><%= @user.try(:location) %></h5>
             <%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit btn btn-primary btn-sm grow-rotate" %>
         </div>
 
