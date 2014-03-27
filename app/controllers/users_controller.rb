@@ -30,8 +30,8 @@ class UsersController < ApplicationController
     @user.about = info[:about]
     @user.email = info[:email]
     @user.location = info[:location]
-    if (user.save)
-      redirect_to user_path
+    if (@user.save)
+      redirect_to user_path(@user)
     else
       render :edit
     end
