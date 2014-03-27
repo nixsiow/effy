@@ -28,7 +28,7 @@ html > body {
     font-family: 'Oleo Script', cursive;
     color: #ffcb25;
     font-size: 20px;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.1px;
 }
 
 span {
@@ -67,9 +67,9 @@ hr.style-two {
     background-image:      -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255, 0.75), rgba(255,255,255,0)); 
 }
 
-kbd {
+kbd, kbd#kbd {
     font-size: 20px;
-    padding: 8px 45px;
+    padding: 8px 22px;
     margin: 5px;
 }
 

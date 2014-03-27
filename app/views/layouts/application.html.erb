@@ -33,7 +33,7 @@
 
       
       <% if @current_user %>
-        <kbd class="ion-speakerphone wobble-vertical">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
+        <kbd class="ion-speakerphone wobble-vertical" id="kbd">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
       <% end %>
       
 
@@ -60,7 +60,7 @@
   </div>
 
   <div id="footer" class="center-block">
-    <kbd><small>Effy - by Nix S.</small></kbd>
+    <kbd id="kbd"><small>Effy - by Nix S.</small></kbd>
   </div>
 
 </body>
