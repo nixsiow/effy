@@ -25,13 +25,16 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find @current_user.id
+    @user = @current_user
     info = params[:user] 
-    user.about = info[:about]
-    user.email = info[:email]
-    user.location = info[:location]
-    user.save
-    redirect_to user_path
+    @user.about = info[:about]
+    @user.email = info[:email]
+    @user.location = info[:location]
+    if (user.save)
+      redirect_to user_path
+    else
+      render :edit
+    end
   end
 
   def edit

@@ -1,6 +1,14 @@
 <div id="center-block">
     <h1>Update Profile <i class="ion-loading-a"></i></h1><br>
 
+    <% if @user.errors.any? %>
+        <ul>
+            <% @user.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
     <%= form_for @user do |f| %>
         <div class="form-group">
             <%= label_tag ' Picture:', nil, :class => 'ion-ios7-camera' %>
@@ -14,12 +22,12 @@
 
         <div class="form-group">
             <%= label_tag ' Email:', nil, :class => 'ion-email' %>
-            <%= f.email_field :email, :value => @user.email.present? ? @user.email : '', :placeholder => 'optional', :class => 'form-control' %>
+            <%= f.email_field :email, :placeholder => 'optional', :class => 'form-control' %>
         </div>
 
         <div class="form-group">
             <%= label_tag ' Location:', nil, :class => 'ion-location' %>
-            <%= f.text_field :location, :value => @user.location.present? ? @user.location : '', :placeholder => 'eg: Sydney, Australia', :class => 'form-control' %>
+            <%= f.text_field :location, :placeholder => 'eg: Sydney, Australia', :class => 'form-control' %>
         </div>
 
         <%= f.submit class: 'btn btn-success'%>

@@ -10,6 +10,8 @@
 #  updated_at      :datetime
 #  password_digest :string(255)
 #  admin           :boolean          default(FALSE)
+#  email           :string(255)
+#  location        :string(255)
 #
 
 class User < ActiveRecord::Base
