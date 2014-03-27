@@ -14,7 +14,7 @@
  *= require_self
  *= require_tree .
  */
-/*
+
 @import "bootstrap.css";
 
 html {
@@ -127,4 +127,4 @@ nav {
 
 .navbar-collapse.in .social {
     display: none;
-}*/
+}
