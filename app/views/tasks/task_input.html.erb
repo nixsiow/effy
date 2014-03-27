@@ -10,7 +10,7 @@
     <div class="center-block" id="task_input">
       <%= form_for @task do |f| %>
         <%= f.hidden_field :category, :value => @category %>
-        <%= f.text_field :description, :required => true, :placeholder => '                           enter your task                      eg: lunch date', :id => 'inputbox' %>
+        <%= f.text_field :description, :required => true, :placeholder => '                       enter your task                           eg: lunch date', :id => 'inputbox' %>
         <br><br>
         <%= f.submit class: 'uibutton'%>
       <% end %>

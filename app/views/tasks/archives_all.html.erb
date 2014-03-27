@@ -1,10 +1,17 @@
 <div class="center-block" id="center-block">
-    <h2 class="lead"><u>All Your Archive Tasks</u></h2>
+    <h2 class="lead pulse-grow h2_heading" id="h2_res"><u>All Your Archive Tasks</u></h2>
 
     <% @tasks.each do |task| %>
-        <h2><%= link_to task.description, task_path(task.id), :class => "outline-inward" %></h2>
+        <h2><%= link_to task.description, task_path(task.id), :class => "outline-inward" %></h2><hr class="style-two">
     <% end %>
 
     <br>
-    <h4 class="ion-reply"><%= link_to('back', tasks_archives_path) %></h4>
+    <h4 class="ion-reply grow"><%= link_to('back', tasks_archives_path) %></h4>
+
+    <div id="user_link">
+        <div class="center-block">
+        <h1 class="outline-inward"><%= link_to('Current Tasks', tasks_categories_path) %></h1>
+         &
+        <h1 class="outline-inward"><%= link_to('Archives', tasks_archives_path) %></h1>
+    </div>
 </div>

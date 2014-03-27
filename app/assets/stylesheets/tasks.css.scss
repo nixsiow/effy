@@ -26,15 +26,10 @@ small {
     margin-right: 50px;
 }
 
-iframe {
-    border: 1px solid black;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
 .bg-primary, .bg-success, .bg-info {
     padding: 8px;
     border-radius: 5px;
+    margin-right: 15px;
 }
 
 .center-block {
@@ -78,7 +73,11 @@ div.progress-bar {
 }
 
 h2 {
-    font-size: 55px!important;
+    font-size: 40px!important;
+}
+
+h2.h2_heading {
+  font-size: 80px!important;
 }
 
 #center-block {
@@ -88,7 +87,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.bg-primary, .bg-success, .bg-info {
+.bg-primary, .bg-success, .bg-danger {
     padding: 5px 30px;
     border-radius: 20px;
 }

@@ -1,5 +1,5 @@
 <div id="center-block">
-    <h1>Update Profile <i class="ion-loading-a"></i></h1><br>
+    <h1 class="pulse-grow">Update Profile <i class="ion-loading-a"></i></h1><br><br>
 
     <% if @user.errors.any? %>
         <ul>
@@ -30,6 +30,6 @@
             <%= f.text_field :location, :placeholder => 'eg: Sydney, Australia', :class => 'form-control' %>
         </div>
 
-        <%= f.submit class: 'btn btn-success'%>
+        <%= f.submit class: 'btn btn-success grow-rotate'%>
     <% end %>
 </div>

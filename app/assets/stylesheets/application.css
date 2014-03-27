@@ -51,7 +51,7 @@ a {
 }
 
 a:hover {
-    color: #9eebff;
+    color: #6fd6ff!important;
 }
 
 .yield_container {
@@ -117,6 +117,7 @@ nav {
     cursor: default;
 }
 
+/*disable link*/
 .disable {
    pointer-events: none;
    cursor: default;
@@ -126,6 +127,64 @@ nav {
     letter-spacing: 4px;
 }
 
+/*disappear on collapse bar*/
 .navbar-collapse.in .social {
     display: none;
+}
+
+
+/*css for screen width lower than 700px*/
+@media screen and (max-width: 700px) {
+/*for responsive iframe */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 35px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    p a#home_signup_btn {
+        margin-top: 30px;
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+
+    #home_welcome {
+        font-family: 'Oleo Script Swash Caps', cursive;
+        font-size: 50px;
+        color: #ff7a8c;
+        text-shadow: 1px 2px 3px #55282e;
+    }
+
+    #tagline {
+        font-size: 13px;
+    }
+
+    #newtask_button{
+        padding: 8px 3px;
+        border-radius: 25px;
+        min-width: 300px;
+        min-height: 50px;
+        margin: 5px 0px;
+        font-size: 20px;
+        text-shadow: 1px 1px 1px #2a0a0d;
+    }
+
+    #inputbox {
+        width: 300px!important;
+    }
+
+    h2.h2_heading#h2_res {
+      font-size: 40px!important;
+    }
+
 }
