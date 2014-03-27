@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_filter :check_if_admin, :only => [:index]
 
   def home
-      @weather = OpenWeather::Current.city("Cochin, IN")    
+       
   end
 
   def index

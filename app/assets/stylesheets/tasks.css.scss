@@ -18,7 +18,7 @@ small {
 }
 
 .form-control {
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .first_group_button, .second_group_button {
@@ -28,8 +28,6 @@ small {
 
 iframe {
     border: 1px solid black;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
     overflow: hidden;
     margin-top: 20px;
 }
@@ -65,10 +63,6 @@ iframe {
   width: 500px;
 }
 
-.iframe {
-    display: inline-block;
-}
-
 .sign_up {
     display: inline-block;
     vertical-align: top;
@@ -97,6 +91,12 @@ h2 {
 .bg-primary, .bg-success, .bg-info {
     padding: 5px 30px;
     border-radius: 20px;
+}
+
+#home_signup_btn {
+  margin-top: 30px;
+  font-size: 40px;
+  padding: 10px 40px;
 }
 
 
@@ -511,3 +511,69 @@ h2 {
   -webkit-animation-direction: alternate;
   animation-direction: alternate;
 }
+
+
+/* Skew Forward */
+
+.skew-forward {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.skew-forward:hover {
+  -webkit-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
+  transform: skew(-10deg);
+}
+
+
+
+/* Pop */
+
+@-webkit-keyframes pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.button_to input:active {
+  -webkit-animation-name: pop;
+  animation-name: pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+

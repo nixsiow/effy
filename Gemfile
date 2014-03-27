@@ -43,6 +43,7 @@ gem 'bootstrap-sass'
 gem 'ionicons-rails'
 gem "font-awesome-rails"
 gem 'rails_12factor'
+gem 'geocoder'
 
 require 'open-uri'
 gem 'json'

@@ -6,7 +6,7 @@ module ApplicationHelper
 
             links += "<li>#{ link_to('<i class="ion-ios7-compose grow">  New Effy</i>'.html_safe, new_task_path) }</li>"
 
-            links += "<li>#{ link_to('<i class="ion-gear-b grow">  Dashboard</i>'.html_safe, '/users/:id', :id => @current_user.id) }</li>"
+            links += "<li>#{ link_to('<i class="ion-bookmark grow">  Dashboard</i>'.html_safe, '/users/:id', :id => @current_user.id) }</li>"
         else
             links += "<li>#{ link_to('Sign Up', new_user_path) }</li>
              <li>#{ link_to('Sign in', login_path) }</li>"
@@ -18,7 +18,24 @@ module ApplicationHelper
         links
     end
 
-    def weather
-        
+    # <span class="<%= weather_icon(@weather.code) %>"></span>
+
+    def weather_icon(code)
+        case code
+        when 200 .. 232
+            'ion-ios7-thunderstorm-outline'
+        when 300 .. 321, 500 .. 531
+            'ion-ios7-rainy-outline'
+        when 600 .. 622
+            'ion-ios7-snowy'
+        when 800
+            'ion-ios7-sunny-outline'
+        when 802 .. 804
+            'ion-ios7-cloud-outline'
+        when 801
+            'ion-ios7-cloudy'
+        else
+            'ion-alert-circled'
+        end
     end
 end

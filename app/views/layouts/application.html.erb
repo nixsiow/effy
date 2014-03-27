@@ -3,11 +3,8 @@
 <head>
   <title>Effy - make your time worth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" src="//http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css
-">
   <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -37,9 +34,13 @@
       <% if @current_user %>
         <kbd class="ion-speakerphone wobble-vertical">   Welcome Back <em><strong><%= @current_user.name %></strong></em> !</kbd>
       <% end %>
-
+      
 
       <ul class="nav navbar-nav navbar-right">
+        <li><a href="" class="<%= weather_icon(session[:weather]) %> grow disable" id="weather"></a></li>
+        <li><a href="" class="grow tooltip-bottom" data-tooltip="<%= session[:location] %>" id="weather"> <%= session[:celcius] %>°c</a></li>
+        <li><a href="" class="disable"></a></li>
+        <li><a href="" class="disable"></a></li>
         <li><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook grow" id="social"></a></li>
         <li><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter grow" id="social"></a></li>
         <li><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus grow" id="social"></a></li>
