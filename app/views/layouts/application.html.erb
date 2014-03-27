@@ -9,6 +9,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
   <nav class="navbar navbar-default" role="navigation">
@@ -37,14 +38,18 @@
       
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="" class="<%= weather_icon(session[:weather]) %> grow disable" id="weather"></a></li>
-        <li><a href="" class="grow tooltip-bottom" data-tooltip="<%= session[:location] %>" id="weather"> <%= session[:celcius] %>°c</a></li>
+        <li><a href="" class="<%= weather_icon(session[:weather]) %> grow disable wobble-vertical" id="weather"></a></li>
+        <li><a href="" class="grow wobble-vertical tooltip-bottom" data-tooltip="<%= session[:location] %> <%= session[:description] %>" id="weather"> <%= session[:celcius] %>°c</a></li>
         <li><a href="" class="disable"></a></li>
         <li><a href="" class="disable"></a></li>
-        <li><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook grow" id="social"></a></li>
-        <li><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter grow" id="social"></a></li>
-        <li><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus grow" id="social"></a></li>
-        <li><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github grow" id="social"></a></li>
+        <li class="social"><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook grow" id="social"></a></li>
+        <li class="social"><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter grow" id="social"></a></li>
+        <li class="social"><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus grow" id="social"></a></li>
+        <li class="social"><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github grow" id="social"></a></li>
+        <li><a href="" class="disable"></a></li>
+        <li class="social"><div class="ribbon-wrapper-blue">
+          <div class="ribbon-blue">BETA</div>
+        </div></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -54,7 +59,9 @@
       <%= yield %>
   </div>
 
-  <div id="footer" class="center-block"><kbd><small>Effy - by Nix S.</small></kbd></div>
+  <div id="footer" class="center-block">
+    <kbd><small>Effy - by Nix S.</small></kbd>
+  </div>
 
 </body>
 </html>

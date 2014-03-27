@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     end
 
     def find_weather
-        if (session[:weather].nil? || Time.now - session[:last_weather_lookup] > 60 * 60)
+        if (session[:weather].nil? || Time.now - session[:last_weather_lookup] > 30 * 60)
             ip = request.remote_ip
             if (ip == '127.0.0.1')
                 ip = '202.171.180.162'
@@ -28,6 +28,9 @@ class ApplicationController < ActionController::Base
             # get celcius
             kelvin = weather['main']['temp']
             session[:celcius] = (kelvin - 273.15).round
+
+            # get description
+            session[:description] = weather['weather'].first['description'].capitalize
         end
     end
 end

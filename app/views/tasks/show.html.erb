@@ -3,10 +3,10 @@
 
     <h2 class="lead bg-success">Category: <%= @task.category %></h2>
     <h2 class="lead bg-info">Status: <%= @task.completed ? "Completed" : "to be complete" %></h2>
-    <%= link_to '   Re-do the Task', task_uncompleted_path(@task), :class => "ion-ios7-undo-outline" if @task.completed %><br>
-    <h2 class="ion-ios7-checkmark"> <%= @current_user.name %></h2>
-
-    <br>
+    <%= link_to '   Re-do the Task', task_uncompleted_path(@task), :class => "ion-ios7-undo-outline" if @task.completed %>
     <br><%= link_to '   Edit Task', edit_task_path(@task), :class => "ion-edit" if @task.completed == false %>
     <br><%= link_to '   Complete & Archive', task_completed_path(@task), :class => "ion-archive" if @task.completed == false %>
+    <br>
+    <h2 class="ion-ios7-checkmark"> <%= @current_user.name %></h2>
+
 </div>
