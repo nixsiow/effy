@@ -459,6 +459,7 @@ h2.h2_heading {
   -ms-transform: translateZ(0);
   transform: translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  margin-top: -10px;
 }
 
 .wobble-horizontal:hover {
@@ -565,7 +566,7 @@ h2.h2_heading {
   }
 }
 
-.button_to input:active {
+.button_to input:active, .pop {
   -webkit-animation-name: pop;
   animation-name: pop;
   -webkit-animation-duration: 0.3s;

@@ -18,8 +18,6 @@ module ApplicationHelper
         links
     end
 
-    # <span class="<%= weather_icon(@weather.code) %>"></span>
-
     def weather_icon(code)
         case code
         when 200 .. 232

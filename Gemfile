@@ -35,7 +35,6 @@ end
 
 # additional gems
 gem 'haml'
-gem 'sextant'
 gem 'bcrypt-ruby'
 gem 'protected_attributes'
 gem 'open-weather', :require => 'open_weather'
@@ -45,8 +44,6 @@ gem "font-awesome-rails"
 gem 'rails_12factor'
 gem 'geocoder'
 
-require 'open-uri'
-gem 'json'
 
 group :development do
     # Additional debugging gems
@@ -56,6 +53,7 @@ group :development do
     gem 'better_errors'
     gem 'binding_of_caller'
     gem 'annotate'
+    gem 'sextant'
 end
 
 # Use ActiveModel has_secure_password

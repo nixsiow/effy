@@ -180,7 +180,6 @@ DEPENDENCIES
   ionicons-rails
   jbuilder (~> 1.2)
   jquery-rails
-  json
   open-weather
   pg
   protected_attributes
