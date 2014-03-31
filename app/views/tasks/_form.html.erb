@@ -1,5 +1,6 @@
 <div class="category_button">
     <div class="first_group_button">
+      <!-- You should use form_tag instead of button_to here- form_tag will allow you to pass the id through in a hidden field rather than integrating it into the URL which is not clean -->
       <%= button_to "Urgent & Important", task_type_path(:category => "UI?#{params[:id]}"), :method => :get, :class => 'btn btn-warning buzz-out wobble-vertical', :id => 'newtask_button' %>
       <%= button_to "Urgent, Not Important", task_type_path(:category => "UNI?#{params[:id]}"), :method => :get, :class => 'btn btn-success buzz-out wobble-vertical', :id => 'newtask_button' %>
     </div>

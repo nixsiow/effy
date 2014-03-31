@@ -12,7 +12,8 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new params[:task]
-    task.category = $category
+    # Using a global variable here (as you had before $category) is very bad!
+    task.category = params['task']['category']
     task.user_id = @current_user.id
     task.completed = false
     task.save
