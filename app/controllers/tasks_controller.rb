@@ -59,11 +59,13 @@ class TasksController < ApplicationController
   end
 
   def index_by_category
-    @tasks_by_category = Task.where(:user_id => @current_user.id, :category => params[:category], :completed => false)
-  end
-
-  def categories_all
-    @tasks = Task.where(:user_id => @current_user.id, :completed => false)
+    if params[:category] == 'all'
+      @tasks_by_category = Task.all
+      @category = '' 
+    else
+      @tasks_by_category = Task.where(:user_id => @current_user.id, :category => params[:category], :completed => false)
+      @category = params[:category]
+    end
   end
 
   def completed
