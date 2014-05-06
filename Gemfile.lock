@@ -86,6 +86,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.9.2)
     multi_xml (0.5.5)
+    newrelic_rpm (3.8.0.218)
     open-weather (0.9.1)
       addressable
       httparty
@@ -180,6 +181,7 @@ DEPENDENCIES
   ionicons-rails
   jbuilder (~> 1.2)
   jquery-rails
+  newrelic_rpm
   open-weather
   pg
   protected_attributes

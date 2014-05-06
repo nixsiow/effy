@@ -44,6 +44,8 @@ gem "font-awesome-rails"
 gem 'rails_12factor'
 gem 'geocoder'
 
+#new relic gem
+gem 'newrelic_rpm'
 
 group :development do
     # Additional debugging gems
