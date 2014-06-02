@@ -5,7 +5,7 @@ Effy is now released in Beta version. Bug report please tweet me on [twitter](ht
 
 Effy is a time management & to-do list app that make your life easier and save your time!
 
-* [Effy on Heroku](http://secret-journey-7619.herokuapp.com)
+* [Effy on Heroku](http://effy.herokuapp.com)
 * [Effy's Source code on GitHub](http://github.com/nixsiow/effy)
 * [Effy's Intro Video](http://goanimate.com/player/embed/0CP9Iq6mDYbQ)
 
