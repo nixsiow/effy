@@ -12,7 +12,8 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new params[:task]
-    task.category = $category
+    # Using a global variable here (as you had before $category) is very bad!
+    task.category = params['task']['category']
     task.user_id = @current_user.id
     task.completed = false
     task.save
@@ -58,11 +59,13 @@ class TasksController < ApplicationController
   end
 
   def index_by_category
-    @tasks_by_category = Task.where(:user_id => @current_user.id, :category => params[:category], :completed => false)
-  end
-
-  def categories_all
-    @tasks = Task.where(:user_id => @current_user.id, :completed => false)
+    if params[:category] == 'all'
+      @tasks_by_category = Task.all
+      @category = '' 
+    else
+      @tasks_by_category = Task.where(:user_id => @current_user.id, :category => params[:category], :completed => false)
+      @category = params[:category]
+    end
   end
 
   def completed

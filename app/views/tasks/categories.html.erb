@@ -2,7 +2,9 @@
     <kbd class="lead pulse-grow">Your Current Tasks</kbd>
 
     <div class="list-group">
-        <a href="/tasks/categories/all" class="list-group-item active">Show all</a>
+        <%= link_to('All', index_category_path('all'), :class => "list-group-item") %>
+        <!-- Change the anchor tags to link_to helper, I have changed the first one to get you started -->
+        <%= link_to('Urgent and Important', index_category_path('UI')) %>
         <a href="/tasks/UI/tasks_by_category" class="list-group-item">Urgent & Important</a>
         <a href="/tasks/UNI/tasks_by_category" class="list-group-item">Urgent, Not Important</a>
         <a href="/tasks/NUI/tasks_by_category" class="list-group-item">Not Urgent, Important</a>

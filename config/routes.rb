@@ -8,7 +8,7 @@ Effy::Application.routes.draw do
   get '/tasks/category/:category' => 'tasks#task_input', :as => :task_type
   get '/tasks/categories' => 'tasks#categories'
   get '/tasks/categories/all' => 'tasks#categories_all'
-  get '/tasks/:category/tasks_by_category' => 'tasks#index_by_category'
+  get '/tasks/:category/tasks_by_category' => 'tasks#index_by_category', :as => :index_category
   get '/tasks/archives' => 'tasks#archives'
   get '/tasks/archives/all' => 'tasks#archives_all'
   get '/tasks/archives/:category' => 'tasks#archive_by_category'

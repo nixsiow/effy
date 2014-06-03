@@ -4,12 +4,12 @@ development:
   database: effy_development
   pool: 5
   host: localhost
-  username: NixSiow
+  username: mathildathompson
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: effy_production
-  pool: 5
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: effy_production
+#   pool: 5
+#   password:
