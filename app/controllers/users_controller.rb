@@ -26,10 +26,11 @@ class UsersController < ApplicationController
 
   def update
     @user = @current_user
-    info = params[:user] 
-    @user.about = info[:about]
-    @user.email = info[:email]
-    @user.location = info[:location]
+    user_info = params[:user]
+    @user.image = user_info[:image]
+    @user.about = user_info[:about]
+    @user.email = user_info[:email]
+    @user.location = user_info[:location]
     if (@user.save)
       redirect_to user_path(@user)
     else

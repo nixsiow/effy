@@ -1,7 +1,7 @@
 <div id="center-block">
-    <h2 class="lead bg-primary wobble-vertical"><%= @task.description %></h2>
+    <h2 class="lead bg-primary wobble-vertical"><%= @task.description %></h2><br>
 
-    <h2 class="lead bg-success wobble-vertical" style="color:#4fa744;">Category: <%= @task.category %></h2>
+    <h2 class="lead bg-success wobble-vertical" style="color:#4fa744;">Category: <%= @task.category %></h2><br>
     <h2 class="lead bg-danger wobble-vertical" style="color:#ff5c77;">Status: <%= @task.completed ? "Completed" : "to be complete" %></h2>
     <%= link_to '   Re-do the Task', task_uncompleted_path(@task), :class => "ion-ios7-undo-outline grow" if @task.completed %>
     <br><%= link_to '   Edit Task', edit_task_path(@task), :class => "ion-edit grow" if @task.completed == false %>

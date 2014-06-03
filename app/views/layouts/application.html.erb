@@ -4,14 +4,15 @@
   <title>Effy - make your time worth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/note.png"/>
-  <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+  <a href="https://github.com/nixsiow/effy" target="_blank" id="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
   <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -34,7 +35,7 @@
 
       
       <% if @current_user %>
-        <kbd class="ion-speakerphone wobble-vertical" id="kbd">   Welcome <em><strong><%= @current_user.name %></strong></em> !</kbd>
+        <kbd class="ion-speakerphone wobble-vertical" id="kbd"> Welcome back!</kbd>
       <% end %>
       
 
@@ -45,7 +46,8 @@
         <li class="social"><a href="http://www.facebook.com/nixsiow.yk" target="_blank" class="ion-social-facebook grow" id="social"></a></li>
         <li class="social"><a href="http://www.twitter.com/nixsiow" target="_blank" class="ion-social-twitter grow" id="social"></a></li>
         <li class="social"><a href="http://plus.google.com/+nixsiow" target="_blank" class="ion-social-googleplus grow" id="social"></a></li>
-        <li class="social"><a href="http://www.github.com/nixsiow" target="_blank" class="ion-social-github grow" id="social"></a></li>
+        <li class="social"><a href="#" target="_blank" class="disable" id="social"></a></li>
+        <li><a href="" class="disable"></a></li>
         <li><a href="" class="disable"></a></li>
         <li class="social"><div class="ribbon-wrapper-blue">
           <div class="ribbon-blue">BETA</div>
