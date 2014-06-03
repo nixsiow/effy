@@ -11,7 +11,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    binding.pry
     task = Task.new params[:task]
     task.user_id = @current_user.id
     task.completed = false

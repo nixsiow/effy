@@ -1,9 +1,9 @@
 User.destroy_all
 Task.destroy_all
 
-u1 = User.create(:name => 'nix', :about => 'good guy', :image => 'http://goo.gl/GpMj8b')
-u2 = User.create(:name => 'fred', :about => 'playboy', :image => 'http://goo.gl/cbfgc8')
-u3 = User.create(:name => 'pretty', :about => 'looking for love', :image => 'http://goo.gl/C6SNAS')
+u1 = User.create(:name => 'testing1', :about => 'good guy', :image => 'http://goo.gl/GpMj8b')
+u2 = User.create(:name => 'testing2', :about => 'playboy', :image => 'http://goo.gl/cbfgc8')
+u3 = User.create(:name => 'testing3', :about => 'looking for love', :image => 'http://goo.gl/C6SNAS')
 
 t1 = Task.create(:description => 'grocery shopping', :completed => false, :category => "UI")
 t2 = Task.create(:description => 'buy egg', :completed => false, :category => "NUI")
