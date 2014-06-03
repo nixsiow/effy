@@ -6,9 +6,9 @@
             <%= image_tag @user.image, :class => "user_image grow img-responsive" %>
         </div>
         <div class="user_second">
-            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u>About <%= @user.name %>: </u></strong><br><%= @user.about %></h5>
-            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u><%= @user.name %>'s Email: </u></strong><br><%= @user.try(:email) %></h5>
-            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u><%= @user.name %>'s Location: </u></strong><br><%= @user.try(:location) %></h5>
+            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u>About: </u></strong><br><%= @user.about %></h5>
+            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u>Email: </u></strong><br><%= @user.email %></h5>
+            <h5 class="lead" style="letter-spacing:1.5px;"><strong style="color:white;"><u>Location: </u></strong><br><%= @user.location %></h5>
             <%= link_to '   Edit Profile', edit_user_path(@user), :class => "ion-edit btn btn-primary btn-sm grow-rotate" %>
         </div>
 

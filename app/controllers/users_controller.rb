@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    # binding.pry
     @user = User.find @current_user.id
   end
 
