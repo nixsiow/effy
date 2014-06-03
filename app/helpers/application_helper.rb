@@ -2,11 +2,11 @@ module ApplicationHelper
     def intellinav
         links = ''
         if @current_user
-            links += "<li>#{ link_to('<i class="ion-log-out grow">  Log out</i> '.html_safe + @current_user.name, login_path, :method => :delete, :confirm => 'Do you want log out?') }</li>"
+            links += "<li>#{ link_to(@current_user.name, user_path(@current_user)) }</li>"
 
-            links += "<li>#{ link_to('<i class="ion-ios7-compose grow">  New</i>'.html_safe, new_task_path) }</li>"
+            links += "<li>#{ link_to('<i class="ion-log-out grow"></i> '.html_safe, login_path, :method => :delete, :confirm => 'Do you want log out?') }</li>"
 
-            links += "<li>#{ link_to('<i class="ion-bookmark grow">  Dashboard</i>'.html_safe, user_path(@current_user)) }</li>"
+            links += "<li>#{ link_to('<i class="ion-ios7-compose grow"></i>'.html_safe, new_task_path) }</li>"
         else
             links += "<li>#{ link_to('Sign Up', new_user_path) }</li>
              <li>#{ link_to('Sign in', login_path) }</li>"
