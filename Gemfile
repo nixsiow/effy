@@ -51,15 +51,15 @@ group :development do
     # Additional debugging gems
     gem 'pry-rails'
     gem 'pry-debugger'
-    # use byebug when development using ruby version >2.0
-    # gem 'pry-byebug'
     gem 'pry-stack_explorer'
     gem 'better_errors'
     gem 'binding_of_caller'
     gem 'annotate'
     gem 'sextant'
-    gem 'awesome_rails_console'
 end
+
+# gem 'pry-byebug'
+# gem 'awesome_rails_console'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
