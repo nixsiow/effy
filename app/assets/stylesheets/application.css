@@ -83,17 +83,6 @@ nav {
   padding: 5px;
   border-bottom: 1px solid #78e2de;
 }
-#footer {
-  position:fixed;
-  left: 0px;
-  bottom: 0px;
-  height: 33px;
-  width: 100%;
-  background: #f7fff4;
-  border-radius: 10px;
-  opacity: 0.7;
-  color: red;
-}
 #weather {
   font-size: 53px;
   cursor: default;
@@ -155,8 +144,5 @@ nav {
   }
   h2.h2_heading#h2_res {
     font-size: 40px!important;
-  }
-  #github-ribbon {
-    display: none;
   }
 }

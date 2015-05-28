@@ -50,7 +50,7 @@ gem 'newrelic_rpm'
 group :development do
     # Additional debugging gems
     gem 'pry-rails'
-    gem 'pry-debugger'
+    gem 'pry-byebug'
     gem 'pry-stack_explorer'
     gem 'better_errors'
     gem 'binding_of_caller'
