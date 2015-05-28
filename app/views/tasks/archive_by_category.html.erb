@@ -1,12 +1,12 @@
-<div class="center-block" id="center-block">
-    <h2 class="pulse-grow h2_heading" id="h2_res"><u>You have <%= pluralize(@archive_by_category.count, params[:category] + ' task') %> in archive!</u></h2>
+<div class="center-block">
+    <h2><u>You have <%= pluralize(@archive_by_category.count, params[:category] + ' task') %> in archive!</u></h2>
 
     <% @archive_by_category.each do |task| %>
       <h2><%= link_to task.description, task_path(task.id), :class => "outline-inward" %></h2><hr class="style-two">
     <% end %>
 
     <br>
-    <h4 class="ion-reply grow"><%= link_to('back', tasks_archives_path) %></h4>
+    <h4 class="ion-reply grow"><%= link_to('Back', tasks_archives_path) %></h4>
 
     <div id="user_link">
         <div class="center-block">

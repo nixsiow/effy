@@ -17,13 +17,12 @@
  */
  @import"bootstrap.css";
  html {
-  background: url('/assets/background.jpg') center center fixed;
-  background-size: cover;
+  Background-color: #313f62;
 }
 html > body {
-  background-color: transparent!important;
+  Background-color: transparent!important;
   font-family:'Julius Sans One', sans-serif;
-  color: #ffcb25;
+  color: #ffffff;
   font-size: 20px;
   letter-spacing: 0.1px;
 }
@@ -33,18 +32,13 @@ span {
   color: #ffde2e;
   text-shadow: 2px 2px 2px #2a0a0d;
 }
-#home_welcome {
-  font-family:'Oleo Script Swash Caps', cursive;
-  font-size: 99px;
-  color: #ff7a8c;
-  text-shadow: 1px 2px 3px #55282e;
-}
 a {
   display: block;
   color: #5867ff;
 }
 a:hover {
   color: #6fd6ff!important;
+  text-decoration: none!important;
 }
 .yield_container {
   padding : 30px;
@@ -52,24 +46,18 @@ a:hover {
 hr.style-two {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-  background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  Background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  Background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  Background-image: -ms-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+  Background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
 }
 kbd, kbd#kbd {
   font-size: 20px;
   padding: 8px 22px;
   margin: 5px;
 }
-a:hover {
-  text-decoration: none!important;
-}
 .category_button {
   text-align: center;
-}
-#social {
-  font-size: 20px;
 }
 i {
   font-size: 20px;
@@ -78,27 +66,21 @@ nav {
   padding: 13px;
 }
 .navbar {
-  border-radius: 10px;
   opacity: 0.8;
   padding: 5px;
   border-bottom: 1px solid #78e2de;
 }
-#weather {
-  font-size: 53px;
-  cursor: default;
-}
 /*disable link*/
- .disable {
+ .disabled_link {
+  font-size: 40px;
   pointer-events: none;
   cursor: default;
 }
 .letter {
   letter-spacing: 4px;
 }
-/*disappear on collapse bar*/
- .navbar-collapse.in .social {
-  display: none;
-}
+
+
 /*css for screen width lower than 700px*/
  @media screen and (max-width: 700px) {
   /*for responsive iframe */
@@ -121,12 +103,6 @@ nav {
     font-size: 20px;
     padding: 15px 20px;
   }
-  #home_welcome {
-    font-family:'Oleo Script Swash Caps', cursive;
-    font-size: 50px;
-    color: #ff7a8c;
-    text-shadow: 1px 2px 3px #55282e;
-  }
   #tagline {
     font-size: 13px;
   }
@@ -142,7 +118,7 @@ nav {
   #inputbox {
     width: 300px!important;
   }
-  h2.h2_heading#h2_res {
-    font-size: 40px!important;
+  .navbar-collapse .navbar-right {
+    display: none;
   }
 }

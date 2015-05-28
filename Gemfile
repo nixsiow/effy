@@ -56,6 +56,7 @@ group :development do
     gem 'binding_of_caller'
     gem 'annotate'
     gem 'sextant'
+    gem 'awesome_rails_console'
 end
 
 # Use ActiveModel has_secure_password
