@@ -1,9 +1,10 @@
 User.destroy_all
 Task.destroy_all
 
-u1 = User.create(:name => 'testing1', :about => 'good guy', :image => 'http://goo.gl/GpMj8b')
-u2 = User.create(:name => 'testing2', :about => 'playboy', :image => 'http://goo.gl/cbfgc8')
-u3 = User.create(:name => 'testing3', :about => 'looking for love', :image => 'http://goo.gl/C6SNAS')
+u1 = User.create(:name => 'tester001', :password => 'abcd1234', :password_confirmation => 'abcd1234', :image => 'http://goo.gl/GpMj8b', :about => 'Playboy')
+u2 = User.create(:name => 'tester002', :password => 'abcd1234', :password_confirmation => 'abcd1234', :image => 'http://goo.gl/GpMj8b', :about => 'Playboy')
+u3 = User.create(:name => 'tester003', :password => 'abcd1234', :password_confirmation => 'abcd1234', :image => 'http://goo.gl/GpMj8b', :about => 'Playboy')
+admin = User.create(:name => 'admin', :password => 'abcd1234', :password_confirmation => 'abcd1234', :image => 'http://goo.gl/GpMj8b', :about => 'I am admin.', :admin => true)
 
 t1 = Task.create(:description => 'grocery shopping', :completed => false, :category => "UI")
 t2 = Task.create(:description => 'buy egg', :completed => false, :category => "NUI")
