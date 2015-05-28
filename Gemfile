@@ -72,3 +72,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+# ruby "1.9.3"
